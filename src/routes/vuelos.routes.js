@@ -1,11 +1,9 @@
-import { Router } from "express";
-import { getEmployees } from "../controllers/vuelos.controller";
+import {Router} from 'express'
+import { vuelos } from '../controllers/vuelos.controller.js';
+
 
 const router = Router()
 
-router.get('/employees', getEmployees )
-router.post('/employees', (req, res) => res.send('creando empleados'))
-router.put('/employees', (req, res) => res.send('actualizando empleados'))
-router.delete('/employees', (req, res) => res.send('eliminando empleados'))
+router.get('/vuelos', vuelos );
 
-export default router
+export default router;
